@@ -1,57 +1,160 @@
 <!doctype html>
-<html amp lang="en">
+<html ⚡ lang="en">
 <head>
-<meta charset="utf-8">
-<script async src="https://cdn.ampproject.org/v0.js"></script>
-<title>TMS | A Creative Agency</title>
-<link rel="canonical" href="https://tellmesomething.co">
-<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <meta charset="utf-8">
+  <title>TMS | A Creative Agency</title>
+  <link rel="canonical" href="index.html">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;animation:none}</style></noscript>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
 
-<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <style amp-custom>
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      margin: 0;
+      background-color: #fff;
+      color: #000;
+      text-transform: uppercase;
+    }
 
-<style amp-custom>
-body {
-background-color: #ffffff; /* Matches your white background */
-margin: 0;
-padding: 0;
-display: flex;
-justify-content: center;
-align-items: center;
-min-height: 100vh;
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .status-line {
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .logo-container {
+      position: relative;
+      width: calc(100% + 40px);
+      margin-left: -20px;
+      margin-right: -20px;
+      margin-bottom: -40px;
+      z-index: 10;
+    }
+
+    .logo-container amp-img img {
+  object-fit: cover;
 }
-.container {
-width: 100%;
-max-width: 1200px; /* Adjust to how wide you want the mockup to appear */
-padding: 10px;
-box-sizing: border-box;
+
+    /* NEW: barcode placed on the white top-right corner of image */
+    .hero-barcode-corner {
+      display: none;
+      position: absolute;
+      bottom: 18px;
+      right: 18px;
+      width: 120px;
+ 
+      padding: 8px;
+      z-index: 20;
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 767px) {
+      .hero-barcode-corner {
+        display: none !important;
+      }
+      .logo-container amp-img {
+  min-height: 58vh;
 }
-/* Optional: making the email linkable for convenience */
-.email-link {
-display: block;
-text-align: center;
-margin-top: 10px;
-font-family: sans-serif;
-font-size: 14px;
-color: #333;
-text-decoration: none;
+    }
+
+    .barcode-image-wrap {
+      width: 100%;
+      position: relative;
+      z-index: 5;
+    }
+
+    .content-footer {
+      padding: 30px 0;
+      text-align: left;
+    }
+
+    .headline {
+      font-size: 48px;
+      line-height: 0.9;
+      font-weight: 900;
+      letter-spacing: -2px;
+      margin: 10px 0;
+    }
+
+    .sub-headline {
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    .barcode-wrap {
+     
+        width: 140px;
+  margin: 20px auto;
+    }
+    @media (min-width: 767px) {
+  .barcode-wrap {
+    
+    display: none;
+    }
 }
-</style>
+
+    .email-link {
+      font-size: 11px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #000;
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .hero-barcode-corner { display: block; }
+      .container { max-width: 800px; }
+      .headline { font-size: 80px; }
+      .hero-barcode-corner {
+        width: 160px;
+        bottom: 94px;
+        right: 24px;
+      }
+    }
+  </style>
 </head>
 <body>
+
 <div class="container">
+  <div class="status-line">Landing Soon: Summer 2026</div>
 
-<amp-img
-src="TMS-Landing.png"
-alt="TMS Creative Agency Landing Soon"
-width="1920"
-height="1080"
-layout="responsive">
-</amp-img>
+  <div class="logo-container">
+    <amp-img src="hero.png" width="1228" height="1080" layout="responsive" alt="TMS Logo"></amp-img>
 
-<a class="email-link" href="mailto:tellmesomething.co@gmail.com">
-Inquiries: tellmesomething.co@gmail.com
-</a>
+    <!-- NEW: overlay barcode in white corner -->
+    <div class="hero-barcode-corner">
+      <amp-img src="barcode.png" width="210" height="72" layout="responsive" alt="Barcode"></amp-img>
+    </div>
+  </div>
 
+ 
+
+  <div class="content-footer">
+    <div class="headline">A CREATIVE<br>AGENCY</div>
+    <div class="sub-headline">Brand, Identity, Narrative</div>
+    <div class="sub-headline" style="font-weight: normal;">Tell your story with clarity and purpose</div>
+
+    <div class="barcode-wrap">
+      <amp-img src="barcode.png" width="140" height="48" layout="fixed" alt="Tell Me Something Barcode"></amp-img>
+    </div>
+
+    <a href="mailto:tellmesomething.co@gmail.com" class="email-link">
+      Inquiries: tellmesomething.co@gmail.com
+    </a>
+  </div>
 </div>
+
 </body>
 </html>
